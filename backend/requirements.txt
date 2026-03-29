@@ -1,0 +1,9 @@
+flask
+flask-sqlalchemy
+flask-cors
+psycopg2-binary
+python-dotenv
+anthropic
+apscheduler
+pytest
+pytest-mock
