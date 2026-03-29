@@ -1,0 +1,9 @@
+{
+  "name": "p5-testing",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "setup": "cd backend && python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt",
+    "test": "cd backend && . .venv/bin/activate && python -m pytest ../tests/ -v --cov=app.models --cov=app.routes --cov-report=term-missing"
+  }
+}
