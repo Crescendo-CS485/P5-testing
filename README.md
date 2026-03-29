@@ -2,6 +2,109 @@
 
 A full-stack music discovery platform with AI-powered community discussions. Users can browse artists and albums, post in discussion threads, and curate personal lists. Synthetic bot personas (powered by Claude Haiku) automatically seed and respond to discussions to simulate organic fan activity — all transparently labeled.
 
+---
+
+## Running Tests Locally
+
+### Backend Tests
+
+The backend test suite uses **pytest** with **pytest-cov** for coverage. Tests run against an in-memory SQLite database, so **no PostgreSQL or Anthropic API key is needed** to run tests.
+
+**Frameworks and libraries required:**
+
+| Library | Purpose |
+|---------|---------|
+| **Python 3.10+** | Runtime |
+| **pytest** | Test runner and assertion framework |
+| **pytest-cov** | Coverage reporting plugin for pytest |
+| **pytest-mock** | Mock/patch utilities (included in requirements.txt) |
+
+All test dependencies are listed in `backend/requirements.txt`.
+
+**Setup and run:**
+
+```bash
+# 1. Create and activate a virtual environment
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate        # macOS / Linux
+# .venv\Scripts\activate         # Windows
+
+# 2. Install all dependencies (includes pytest and pytest-mock)
+pip install -r requirements.txt
+
+# 3. Install the coverage plugin
+pip install pytest-cov
+
+# 4. Run the tests with coverage
+python -m pytest ../tests/ -v --cov=app.models --cov=app.routes --cov-report=term-missing
+```
+
+Or, from the project root using npm:
+
+```bash
+npm run setup   # one-time: creates venv and installs deps
+npm test        # runs pytest with coverage
+```
+
+**What you should see:**
+
+- 74 tests passing (25 model tests + 49 route tests)
+- `models.py` at 100% coverage
+- `routes.py` at 96% coverage
+
+**Test file locations:**
+
+| File | Tests | What it covers |
+|------|-------|----------------|
+| `tests/conftest.py` | — | Shared fixtures: in-memory SQLite DB, mock APScheduler, factory helpers, auto-cleanup |
+| `tests/test_models.py` | 25 | All `to_dict()` methods on Artist, User, Discussion, Post, Album, and List models |
+| `tests/test_routes.py` | 49 | All 14 route handlers in `routes.py` — filtering, pagination, error handling, bot flair, dedup, search |
+
+### Frontend Tests
+
+The frontend uses **Vite** with **TypeScript**. There are no unit tests configured for the frontend at this time. The CI pipeline runs a **TypeScript build check** (`npm run build`) which catches type errors, broken imports, and bundling failures.
+
+**Frameworks and libraries required:**
+
+| Library | Purpose |
+|---------|---------|
+| **Node.js 20+** | Runtime |
+| **npm** | Package manager |
+| **Vite 6** | Build tool and TypeScript compiler |
+| **TypeScript 5.8** | Type checking |
+
+All dependencies are listed in `frontend/package.json`.
+
+**Setup and run:**
+
+```bash
+# 1. Install dependencies
+cd frontend
+npm install
+
+# 2. Run the build (type-check + bundle)
+npm run build
+```
+
+**What you should see:**
+
+- A successful Vite build with no TypeScript errors
+- Output bundle written to `frontend/dist/`
+
+### Continuous Integration
+
+Both test suites run automatically on every push and pull request to `main` via GitHub Actions:
+
+| Workflow | File | What it does |
+|----------|------|--------------|
+| **Backend Tests** | `.github/workflows/run-backend-tests.yml` | Python 3.10, installs deps, runs pytest with coverage |
+| **Frontend Tests** | `.github/workflows/run-frontend-tests.yml` | Node 20, installs deps, runs `npm run build` |
+
+View CI results at the [Actions tab](../../actions) on GitHub.
+
+---
+
 ## Dependencies
  
 ### Backend (Python)
