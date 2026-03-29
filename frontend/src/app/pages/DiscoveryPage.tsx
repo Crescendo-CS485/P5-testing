@@ -99,7 +99,7 @@ export default function DiscoveryPage() {
           </h1>
           <p className="text-sm text-[#999999]">
             {total} {total === 1 ? "artist" : "artists"} •{" "}
-            Building synthetic communities for independent artists
+            Discover and engage with independent artists
           </p>
         </div>
 

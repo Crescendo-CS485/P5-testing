@@ -9,6 +9,7 @@ bp = Blueprint("api", __name__, url_prefix="/api")
 
 @bp.route("/artists")
 def get_artists():
+    """Return paginated artist list with optional active_discussions, genre, and sort filters."""
     query = Artist.query
 
     # Filter: active discussions (activity_score >= 8.5)
