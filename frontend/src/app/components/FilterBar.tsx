@@ -47,10 +47,12 @@ export function FilterBar({
   return (
     <div className="bg-[#252525] border border-[#333333] mb-6">
       {/* Header - Always Visible */}
-      <button
-        type="button"
-        className="w-full flex items-center justify-between p-4 hover:bg-[#2a2a2a] transition-colors text-left"
+      <div
+        role="button"
+        tabIndex={0}
+        className="w-full flex items-center justify-between p-4 hover:bg-[#2a2a2a] transition-colors text-left cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setIsExpanded(!isExpanded); }}
         aria-expanded={isExpanded}
         aria-controls="filter-bar-content"
       >
@@ -82,7 +84,7 @@ export function FilterBar({
             <ChevronDown className="w-5 h-5 text-[#999999]" />
           )}
         </div>
-      </button>
+      </div>
 
       {/* Expandable Content */}
       {isExpanded && (

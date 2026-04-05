@@ -17,7 +17,7 @@ interface DiscussionsResponse {
 
 type DevState = "loading" | "not-found";
 
-function formatTime(isoString: string): string {
+export function formatTime(isoString: string): string {
   const diff = Date.now() - new Date(isoString).getTime();
   const minutes = Math.floor(diff / 60_000);
   if (minutes < 1) return "just now";
