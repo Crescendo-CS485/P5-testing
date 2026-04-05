@@ -1,0 +1,10 @@
+{
+  "extends": "../frontend/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "../frontend/node_modules",
+    "moduleResolution": "node",
+    "typeRoots": ["../frontend/node_modules/@types"],
+    "types": ["jest"]
+  },
+  "include": ["."]
+}
