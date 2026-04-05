@@ -1,4 +1,4 @@
-import { MessageSquare, Star } from "lucide-react";
+import { MessageSquare, Music, Star } from "lucide-react";
 import { Link } from "react-router";
 import { Album } from "../data/mockData";
 
@@ -16,11 +16,17 @@ export function AlbumCard({ album }: AlbumCardProps) {
     >
       {/* Cover Art */}
       <div className="relative aspect-square overflow-hidden border-b border-[#333333]">
-        <img
-          src={album.coverUrl}
-          alt={album.title}
-          className="w-full h-full object-cover"
-        />
+        {album.coverUrl ? (
+          <img
+            src={album.coverUrl}
+            alt={album.title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a]">
+            <Music className="w-12 h-12 text-[#444444]" />
+          </div>
+        )}
         {/* Score Badge */}
         <div
           className={`absolute top-2 right-2 px-2 py-1 text-center font-bold text-sm ${

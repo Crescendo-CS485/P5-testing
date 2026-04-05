@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Calendar, Star, MessageSquare } from "lucide-react";
+import { Calendar, Star, MessageSquare, Music } from "lucide-react";
 import { Link } from "react-router";
 import { AlbumCardSkeleton } from "../components/AlbumCardSkeleton";
 import { ErrorState, EmptyState } from "../components/PageStates";
@@ -153,11 +153,17 @@ export default function NewReleasesPage() {
                     className="bg-[#252525] border border-[#333333] hover:border-[#5b9dd9] transition-colors flex flex-col"
                   >
                     <div className="relative aspect-square overflow-hidden border-b border-[#333333]">
-                      <img
-                        src={album.coverUrl}
-                        alt={album.title}
-                        className="w-full h-full object-cover"
-                      />
+                      {album.coverUrl ? (
+                        <img
+                          src={album.coverUrl}
+                          alt={album.title}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a]">
+                          <Music className="w-12 h-12 text-[#444444]" />
+                        </div>
+                      )}
                       <div
                         className={`absolute top-2 right-2 px-2 py-1 font-bold text-sm ${
                           album.userScore >= 9 ? "bg-[#5b9dd9] text-white" : "bg-[#444444] text-white"
