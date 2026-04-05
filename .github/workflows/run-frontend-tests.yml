@@ -26,3 +26,7 @@ jobs:
       - name: Build (type-check and bundle)
         working-directory: frontend
         run: npm run build
+
+      - name: Run Jest test suites
+        working-directory: frontend
+        run: npm test
