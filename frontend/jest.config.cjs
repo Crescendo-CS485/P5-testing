@@ -15,4 +15,9 @@ module.exports = {
     "**/__tests__/**/*.{ts,tsx}",
     "**/*.{test,spec}.{ts,tsx}",
   ],
+  collectCoverage: true,
+  collectCoverageFrom: [
+    "<rootDir>/src/app/pages/DiscoveryPage.tsx",
+    "<rootDir>/src/app/pages/ArtistPage.tsx",
+  ],
 };

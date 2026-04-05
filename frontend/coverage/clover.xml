@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1775415645864" clover="3.2.0">
+  <project timestamp="1775415645864" name="All files">
+    <metrics statements="101" coveredstatements="101" conditionals="138" coveredconditionals="137" methods="36" coveredmethods="36" elements="275" coveredelements="274" complexity="0" loc="101" ncloc="101" packages="1" files="2" classes="2"/>
+    <file name="ArtistPage.tsx" path="/home/mvhilario/P5-testing/frontend/src/app/pages/ArtistPage.tsx">
+      <metrics statements="40" coveredstatements="40" conditionals="60" coveredconditionals="59" methods="13" coveredmethods="13"/>
+      <line num="21" count="13" type="stmt"/>
+      <line num="22" count="13" type="stmt"/>
+      <line num="23" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="5" type="stmt"/>
+      <line num="26" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="31" count="90" type="stmt"/>
+      <line num="32" count="90" type="stmt"/>
+      <line num="33" count="90" type="stmt"/>
+      <line num="35" count="90" type="stmt"/>
+      <line num="38" count="33" type="stmt"/>
+      <line num="39" count="32" type="cond" truecount="2" falsecount="0"/>
+      <line num="40" count="30" type="stmt"/>
+      <line num="45" count="90" type="stmt"/>
+      <line num="48" count="90" type="stmt"/>
+      <line num="51" count="35" type="stmt"/>
+      <line num="52" count="33" type="cond" truecount="2" falsecount="0"/>
+      <line num="53" count="30" type="stmt"/>
+      <line num="59" count="90" type="cond" truecount="2" falsecount="0"/>
+      <line num="62" count="11" type="cond" truecount="1" falsecount="1"/>
+      <line num="63" count="11" type="stmt"/>
+      <line num="64" count="11" type="stmt"/>
+      <line num="65" count="11" type="stmt"/>
+      <line num="70" count="7" type="stmt"/>
+      <line num="71" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="72" count="4" type="stmt"/>
+      <line num="73" count="4" type="stmt"/>
+      <line num="75" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="78" count="3" type="stmt"/>
+      <line num="80" count="10" type="stmt"/>
+      <line num="84" count="90" type="cond" truecount="3" falsecount="0"/>
+      <line num="85" count="90" type="cond" truecount="4" falsecount="0"/>
+      <line num="86" count="90" type="cond" truecount="2" falsecount="0"/>
+      <line num="88" count="90" type="stmt"/>
+      <line num="125" count="100" type="stmt"/>
+      <line num="196" count="6" type="stmt"/>
+      <line num="229" count="1" type="stmt"/>
+      <line num="240" count="2" type="stmt"/>
+      <line num="251" count="1" type="stmt"/>
+    </file>
+    <file name="DiscoveryPage.tsx" path="/home/mvhilario/P5-testing/frontend/src/app/pages/DiscoveryPage.tsx">
+      <metrics statements="61" coveredstatements="61" conditionals="78" coveredconditionals="78" methods="23" coveredmethods="23"/>
+      <line num="30" count="169" type="stmt"/>
+      <line num="31" count="169" type="stmt"/>
+      <line num="32" count="978" type="cond" truecount="6" falsecount="0"/>
+      <line num="33" count="547" type="cond" truecount="2" falsecount="0"/>
+      <line num="34" count="26" type="stmt"/>
+      <line num="36" count="525" type="stmt"/>
+      <line num="39" count="169" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="45" count="160" type="stmt"/>
+      <line num="46" count="160" type="stmt"/>
+      <line num="47" count="160" type="stmt"/>
+      <line num="48" count="160" type="stmt"/>
+      <line num="49" count="160" type="stmt"/>
+      <line num="50" count="160" type="stmt"/>
+      <line num="51" count="160" type="stmt"/>
+      <line num="53" count="160" type="stmt"/>
+      <line num="62" count="160" type="stmt"/>
+      <line num="65" count="90" type="stmt"/>
+      <line num="66" count="87" type="cond" truecount="2" falsecount="0"/>
+      <line num="67" count="84" type="stmt"/>
+      <line num="71" count="160" type="cond" truecount="2" falsecount="0"/>
+      <line num="72" count="160" type="cond" truecount="2" falsecount="0"/>
+      <line num="73" count="160" type="cond" truecount="2" falsecount="0"/>
+      <line num="74" count="160" type="stmt"/>
+      <line num="76" count="160" type="cond" truecount="3" falsecount="0"/>
+      <line num="77" count="160" type="cond" truecount="3" falsecount="0"/>
+      <line num="79" count="160" type="cond" truecount="5" falsecount="0"/>
+      <line num="81" count="160" type="cond" truecount="3" falsecount="0"/>
+      <line num="83" count="160" type="stmt"/>
+      <line num="84" count="3" type="stmt"/>
+      <line num="85" count="3" type="stmt"/>
+      <line num="86" count="3" type="stmt"/>
+      <line num="87" count="3" type="stmt"/>
+      <line num="88" count="3" type="stmt"/>
+      <line num="89" count="3" type="stmt"/>
+      <line num="92" count="160" type="stmt"/>
+      <line num="113" count="5" type="stmt"/>
+      <line num="114" count="5" type="stmt"/>
+      <line num="136" count="8" type="stmt"/>
+      <line num="137" count="8" type="stmt"/>
+      <line num="141" count="7" type="stmt"/>
+      <line num="142" count="7" type="stmt"/>
+      <line num="150" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="157" count="1056" type="stmt"/>
+      <line num="175" count="558" type="stmt"/>
+      <line num="193" count="1" type="stmt"/>
+      <line num="204" count="225" type="cond" truecount="2" falsecount="0"/>
+      <line num="205" count="185" type="stmt"/>
+      <line num="206" count="40" type="cond" truecount="2" falsecount="0"/>
+      <line num="207" count="20" type="stmt"/>
+      <line num="208" count="20" type="cond" truecount="2" falsecount="0"/>
+      <line num="209" count="5" type="stmt"/>
+      <line num="211" count="15" type="stmt"/>
+      <line num="214" count="225" type="stmt"/>
+      <line num="218" count="18" type="stmt"/>
+      <line num="236" count="2" type="stmt"/>
+      <line num="263" count="1" type="stmt"/>
+      <line num="274" count="1" type="stmt"/>
+      <line num="285" count="3" type="stmt"/>
+      <line num="296" count="2" type="stmt"/>
+      <line num="308" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
